@@ -1,0 +1,9 @@
+Building the PyCon AU 2015 website in Wagtail in under 30 minutes
+=================================================================
+
+The slides I used to give a talk about Wagtail at DjangoCon AU 2015
+
+To build the slides, watch for changes, and run a development server, run:
+
+	$ npm install .
+	$ npm start

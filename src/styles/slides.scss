@@ -1,0 +1,100 @@
+.slides {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.slide {
+	display: flex;
+	flex-direction: column;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+
+	font-size: 2.5rem;
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: $padding-rythm 0;
+	}
+
+	h1 {
+		font-size: 2.5em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	li {
+		margin-top: $padding-rythm;
+		margin-bottom: $padding-rythm;
+	}
+
+	dd {
+		margin-bottom: $padding-rythm;
+	}
+
+	transition: left 0.5s ease-in-out;
+
+	&.bespoke-active {
+		left: 0;
+		z-index: 10;
+	}
+	&.bespoke-inactive {
+		pointer-events: none;
+		z-index: 1;
+
+		&.bespoke-before {
+			left: -100vw;
+		}
+		&.bespoke-after {
+			left: 100vw;
+		}
+	}
+
+	&--header {
+		background-color: #333;
+		color: white;
+		padding: $padding-rythm;
+	}
+	&--body {
+		padding: $padding-rythm;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+		background-color: black;
+		text-align: center;
+		font-size: 3rem;
+		h1 {
+			white-space: normal;
+			text-overflow: normal;
+			overflow: visible;
+			color: white;
+		}
+	}
+
+}
+
+.bespoke-bullet {
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	&-active {
+		opacity: 1;
+	}
+}
+
+.right {
+	float: right;
+	margin-left: 1em;
+}
